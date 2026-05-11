@@ -5,10 +5,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const DEFAULT_STATS = [
-    { value: 51, prefix: "$", suffix: "K+", label: "All-time Earnings", desc: "Verified on Guru.com" },
-    { value: 100, prefix: "", suffix: "+", label: "Projects Completed", desc: "Across all service areas" },
-    { value: 35, prefix: "", suffix: "+", label: "Happy Clients", desc: "Across multiple continents" },
-    { value: 100, prefix: "", suffix: "%", label: "Satisfaction Rate", desc: "Top-rated Guru.com team" },
+    { value: 350, prefix: "", suffix: "%", label: "Avg. Organic Growth", desc: "12-month client cohort" },
+    { value: 120, prefix: "", suffix: "+", label: "Brands Scaled", desc: "Across SEO, SMM & media" },
+    { value: 8, prefix: "", suffix: "M+", label: "Monthly Impressions", desc: "Delivered across channels" },
+    { value: 4, prefix: "", suffix: "X", label: "Avg. ROI Multiple", desc: "On managed ad spend" },
 ];
 
 function StatItem({ value, prefix = "", suffix, label, desc, index }) {

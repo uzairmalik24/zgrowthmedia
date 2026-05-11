@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 const LoaderContext = createContext(null);
 
 const BrandLogo = () => (
-    <img src="/images/main-logo-light.png" alt="Logo" style={{ width: 250, height: 250, objectFit: "contain" }} />
+    <img src="/images/main-logo-light.png" alt="Z Growth Media" style={{ width: 250, height: 250, objectFit: "contain" }} />
 );
 
 export function LoaderProvider({ children }) {
@@ -102,7 +102,7 @@ export function LoaderProvider({ children }) {
                     </defs>
                     <rect
                         x="0" y="0" width="100%" height="100%"
-                        fill="#008FEA"
+                        fill="var(--primary)"
                         clipPath="url(#page-curtain-clip)"
                     />
                 </svg>

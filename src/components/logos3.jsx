@@ -5,47 +5,16 @@ import {
   CarouselItem,
 } from "../components/ui/carousel";
 
+// Replace each `image` with the real client logo (SVG/PNG) once provided.
+// Drop the files into /public/images/clients/ and update the paths.
 const logos = [
-  {
-    id: "logo-1",
-    description: "Google",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-  },
-  {
-    id: "logo-2",
-    description: "Microsoft",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
-  },
-  {
-    id: "logo-3",
-    description: "Shopify",
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg",
-  },
-  {
-    id: "logo-4",
-    description: "Stripe",
-    image: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg",
-  },
-  {
-    id: "logo-5",
-    description: "Slack",
-    image: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg",
-  },
-  {
-    id: "logo-6",
-    description: "Zoom",
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/11/Zoom_Logo_2022.svg",
-  },
-  {
-    id: "logo-7",
-    description: "HubSpot",
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg",
-  },
-  // {
-  //   id: "logo-8",
-  //   description: "Atlassian",
-  //   image: "https://upload.wikimedia.org/wikipedia/commons/8/82/Atlassian-logo.svg",
-  // },
+  { id: "logo-twinspires", description: "TwinSpires",   image: "/images/clients/twinspires.svg" },
+  { id: "logo-prbytes",    description: "PR Bytes",     image: "/images/clients/pr-bytes.svg"   },
+  { id: "logo-client-3",   description: "{{Client 3}}", image: "/images/clients/client-3.svg"   },
+  { id: "logo-client-4",   description: "{{Client 4}}", image: "/images/clients/client-4.svg"   },
+  { id: "logo-client-5",   description: "{{Client 5}}", image: "/images/clients/client-5.svg"   },
+  { id: "logo-client-6",   description: "{{Client 6}}", image: "/images/clients/client-6.svg"   },
+  { id: "logo-client-7",   description: "{{Client 7}}", image: "/images/clients/client-7.svg"   },
 ];
 
 const Logos3 = ({ heading = "Trusted by these companies" }) => {
@@ -99,8 +68,8 @@ const Logos3 = ({ heading = "Trusted by these companies" }) => {
         </Carousel>
 
         {/* Fade edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-linear-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-linear-to-l from-background to-transparent" />
       </div>
     </section>
   );
