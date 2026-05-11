@@ -280,34 +280,40 @@ export default function Hero() {
 
                 <div className="hero-content">
 
-                    <div className='mt-5'></div>
+                    <div className="eyebrow">
+                        <span className="eyebrow-dot" />
+                        Z Growth Media · SEO · AEO · GEO
+                    </div>
+
                     <h1 ref={headlineRef} className="hero-headline">
-                        Transform Your <br />
-                        <span className="accent">Digital Presence</span>
+                        Scaling Brands via <br />
+                        <span className="accent">Traditional SEO & Next-Gen AI Optimization</span>
+                        <br />
+                        <span style={{ fontSize: '0.6em', fontWeight: 700, opacity: 0.7 }}>(AEO / GEO)</span>
                     </h1>
 
                     <p ref={subRef} className="hero-sub">
-                        Expert SEO, digital marketing, software development, AI solutions, and graphic design — 
-                        everything you need to dominate your market.
+                        We rank you on Google today and on ChatGPT, Gemini, Perplexity, and Google SGE tomorrow.
+                        End-to-end SEO, social media marketing, and media platform management — built for the AI-era of search.
                     </p>
 
-                    {/* <div ref={ctaRef} className="cta-group">
-                        <Link to="/signup" className="btn-primary">
-                            Get Started Today
+                    <div className="cta-group">
+                        <Link to="/contact" className="btn-primary">
+                            Get a Quote
                             <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
                                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </Link>
-                        <Link to="/demo" className="btn-secondary">
-                            View Our Work
+                        <Link to="/case-studies" className="btn-secondary">
+                            See Case Studies
                             <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
                                 <circle cx="8" cy="8" r="6.5" stroke="currentColor" strokeWidth="1.5" />
                                 <path d="M6.5 5.5l4 2.5-4 2.5V5.5z" fill="currentColor" />
                             </svg>
                         </Link>
-                    </div> */}
+                    </div>
 
-                    <p className="trust-line">Free Consultation · Trusted by 100+ Businesses</p>
+                    <p className="trust-line">UK & Pakistan Offices · Trusted by Global Brands</p>
 
                     {/* Stats — moved from old Home.jsx hero section */}
                     {/* <div className="hero-stats">

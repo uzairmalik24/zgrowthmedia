@@ -16,31 +16,30 @@ gsap.registerPlugin(ScrollTrigger);
 
 /* ── Constants ──────────────────────────────────────────────────── */
 const SERVICES = [
-    { value: "web-dev", label: "Web Development" },
-    { value: "app-dev", label: "App Development" },
-    { value: "seo", label: "SEO & Growth" },
-    { value: "graphic", label: "Graphic Design" },
-    { value: "illustration", label: "Illustration" },
-    { value: "video", label: "Video Editing" },
-    { value: "ai-ml", label: "AI / ML" },
-    { value: "automation", label: "Automation" },
-    { value: "devops", label: "DevOps" },
+    { value: "seo", label: "Search Engine Optimization (SEO)" },
+    { value: "aeo", label: "Answer Engine Optimization (AEO)" },
+    { value: "geo", label: "Generative Experience Optimization (GEO)" },
+    { value: "smm", label: "Social Media Marketing (SMM)" },
+    { value: "media", label: "Media Platform Management" },
+    { value: "full-stack", label: "Full-Stack Growth (Retainer)" },
+    { value: "audit", label: "Audit Only" },
+    { value: "other", label: "Other / Discuss" },
 ];
 
 const BUDGETS = [
-    { value: "under-1k", label: "Under $1,000" },
-    { value: "1k-5k", label: "$1,000 – $5,000" },
-    { value: "5k-15k", label: "$5,000 – $15,000" },
-    { value: "15k-50k", label: "$15,000 – $50,000" },
-    { value: "50k-plus", label: "$50,000+" },
+    { value: "under-2k", label: "Under $2,000 / month" },
+    { value: "2k-5k", label: "$2,000 – $5,000 / month" },
+    { value: "5k-10k", label: "$5,000 – $10,000 / month" },
+    { value: "10k-25k", label: "$10,000 – $25,000 / month" },
+    { value: "25k-plus", label: "$25,000+ / month" },
     { value: "discuss", label: "Let's discuss" },
 ];
 
 const INFO_ITEMS = [
-    { num: "01", label: "Location", value: "Bhakkar, Pakistan" },
-    { num: "02", label: "Email", value: "pioneerstechofficial@gmail.com", href: "mailto:pioneerstechofficial@gmail.com" },
-    { num: "03", label: "Phone", value: "+92 346 4963514", href: "tel:+923464963514" },
-    { num: "04", label: "Response Time", value: "1–2 business days" },
+    { num: "01", label: "United Kingdom", value: "{{UK_OFFICE_ADDRESS}}" },
+    { num: "02", label: "Pakistan", value: "{{PK_OFFICE_ADDRESS}}" },
+    { num: "03", label: "Email", value: "{{EMAIL_ADDRESS}}", href: "mailto:{{EMAIL_ADDRESS}}" },
+    { num: "04", label: "Response Time", value: "Within 1 business day" },
 ];
 
 /* ── Email sender ────────────────────────────────────────────────── */
@@ -332,8 +331,8 @@ export default function ContactPage() {
                             </p>
                             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                                 {[
-                                    { label: "Hire us on Guru →", href: "https://www.guru.com/freelancers/pioneers-tech/", ext: true },
-                                    { label: "Chat on WhatsApp →", href: "https://wa.me/923464963514", ext: true },
+                                    { label: "Chat on WhatsApp →", href: "https://wa.me/{{WHATSAPP_NUMBER}}", ext: true },
+                                    { label: "Email us directly →", href: "mailto:{{EMAIL_ADDRESS}}", ext: false },
                                 ].map(({ label, href, ext }) => (
                                     <a key={label} href={href}
                                         target={ext ? "_blank" : undefined}

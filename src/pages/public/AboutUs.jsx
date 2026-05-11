@@ -11,33 +11,33 @@ gsap.registerPlugin(ScrollTrigger);
 // ── Data ──────────────────────────────────────────────────────────────────────
 
 const STATS = [
-    { value: 51, prefix: "$", suffix: "K", label: "All-time earnings" },
-    { value: 100, prefix: "", suffix: "", label: "Projects completed" },
-    { value: 35, prefix: "", suffix: "", label: "Happy clients" },
-    { value: 31, prefix: "$", suffix: "K", label: "Largest single employer" },
+    { value: 350, prefix: "", suffix: "%", label: "Avg. organic growth" },
+    { value: 120, prefix: "", suffix: "+", label: "Brands scaled" },
+    { value: 8, prefix: "", suffix: "M+", label: "Monthly impressions" },
+    { value: 4, prefix: "", suffix: "X", label: "Avg. ROI multiple" },
 ];
 
 const SERVICES = [
-    { num: "01", title: "Web & Mobile Development", desc: "Full-stack web apps and mobile solutions built for speed, scale, and seamless UX." },
-    { num: "02", title: "UI/UX & Brand Identity", desc: "Purposeful design systems, interfaces, and brand identities that convert and inspire." },
-    { num: "03", title: "2D/3D Animation & Video", desc: "Character design, architectural visualization, animated videos, and motion graphics." },
-    { num: "04", title: "CAD & Engineering", desc: "Mechanical CAD design, architectural drawings, and technical drafting for precise builds." },
-    { num: "05", title: "DevOps & Linux Server Mgmt", desc: "Server setup, automation pipelines, and reliable infrastructure management." },
-    { num: "06", title: "SEO, Marketing & VA Services", desc: "Data-backed digital marketing, SEO articles, and dedicated virtual assistance." },
+    { num: "01", title: "Search Engine Optimization", desc: "Technical audits, on-page strategy, and high-DA link building that compounds month over month." },
+    { num: "02", title: "Answer Engine Optimization", desc: "Citation-ready content engineered for ChatGPT, Gemini, Perplexity and Claude." },
+    { num: "03", title: "Generative Experience Optimization", desc: "SGE-first content architecture and continuous AI-SERP monitoring." },
+    { num: "04", title: "Social Media Marketing", desc: "Full-service organic and paid across TikTok, Meta, YouTube and X — native creative, daily optimization." },
+    { num: "05", title: "Media Platform Management", desc: "Third-party publications, editorial placements, podcast tours, and brand partnerships at scale." },
+    { num: "06", title: "Strategic Brand Partnerships", desc: "Co-marketing structures and earned media that turn distribution into a compounding moat." },
 ];
 
 const WHY_US = [
-    { num: "01", title: "Verified & Trusted", desc: "Top-rated Guru.com team with a 100% satisfaction rate and $51K+ in completed work." },
-    { num: "02", title: "Clear Communication", desc: "Transparent timelines, milestone-based delivery, and no ambiguity at any stage." },
-    { num: "03", title: "Creative + Technical", desc: "Rare combination of deep engineering skills and genuine creative sensibility." },
-    { num: "04", title: "Long-term Partnership", desc: "We think beyond the project — your growth is built into every decision we make." },
+    { num: "01", title: "AI-Era Specialists", desc: "We were doing AEO and GEO before they had acronyms — our team lives in the LLM SERP daily." },
+    { num: "02", title: "Honest Reporting", desc: "Real attribution, real numbers, real recommendations. No vanity dashboards, no agency theater." },
+    { num: "03", title: "Two-Continent Team", desc: "UK strategy leadership and Pakistan production depth — premium quality at a real ROI." },
+    { num: "04", title: "Retainer-Grade Discipline", desc: "Weekly stand-ups, monthly performance reviews, and dedicated channels — no ghosting, no chaos." },
 ];
 
 const TERMS = [
-    { term: "50% milestone to start", sub: "Work begins once the first milestone is funded." },
-    { term: "50% after delivery & approval", sub: "Final payment only after you're satisfied." },
-    { term: "Minor revisions included", sub: "We refine until it's right — no nickel-and-diming." },
-    { term: "NDA & full confidentiality", sub: "Your ideas and data stay completely protected." },
+    { term: "Discovery call first — no obligation", sub: "We only take on engagements we believe we can win." },
+    { term: "Fixed-fee retainers", sub: "Clear scope, clear pricing, no surprise invoices." },
+    { term: "Monthly performance reports", sub: "Real KPIs and attribution against agreed targets." },
+    { term: "NDA & full confidentiality", sub: "Your strategy and data stay completely protected." },
 ];
 
 // ── Animated horizontal rule ──────────────────────────────────────────────────
@@ -116,16 +116,16 @@ function OriginSection() {
                     Our Story
                 </p>
                 <div className="origin-el" style={{ opacity: 0 }}>
-                    <CurtainHeading text="From Bhakkar to the World" as="h2"
+                    <CurtainHeading text="Built for the AI-Era of Search" as="h2"
                         style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)", fontWeight: 900, letterSpacing: "-0.03em", lineHeight: 1.05, color: "var(--foreground)", marginBottom: "1.75rem" }}
                         delay={0}
                     />
                 </div>
                 <p className="origin-el" style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "var(--muted-foreground)", marginBottom: "1.25rem", marginTop: 0, opacity: 0 }}>
-                    Founded in December 2023 in Bhakkar, Punjab, Pioneers Tech started with a simple conviction — that world-class digital work doesn't require a world-class zip code.
+                    Z Growth Media was founded by M. Zain on a single conviction — that the agency model needed an upgrade for a world where customers ask AI before they search.
                 </p>
                 <p className="origin-el" style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "var(--muted-foreground)", margin: 0, opacity: 0 }}>
-                    In under two years, we grew into a verified Guru.com team with over $51,000 in completed projects, 100 transactions, and 35 clients across multiple continents.
+                    With dual offices in the United Kingdom and Pakistan, we combine front-line strategic leadership with deep production capacity — running SEO, social, and media platform programs for brands that need both traditional search authority and AI-era visibility.
                 </p>
             </div>
 
@@ -133,12 +133,12 @@ function OriginSection() {
                 <span ref={decorRef} style={{ position: "absolute", top: "-1rem", right: "-1rem", fontSize: "12rem", fontWeight: 900, letterSpacing: "-0.06em", color: "transparent", WebkitTextStroke: "1px var(--border)", lineHeight: 1, userSelect: "none", pointerEvents: "none" }}>
                     01
                 </span>
-                <p style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--primary)", margin: "0 0 1rem 0" }}>Since Dec 2023</p>
+                <p style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--primary)", margin: "0 0 1rem 0" }}>SEO · AEO · GEO</p>
                 <p ref={bigNumRef} style={{ fontSize: "clamp(3rem, 6vw, 5rem)", fontWeight: 900, letterSpacing: "-0.04em", color: "var(--foreground)", margin: "0 0 0.25rem 0", lineHeight: 1 }}>0%</p>
-                <p style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted-foreground)", margin: "0 0 2rem 0" }}>Client satisfaction on Guru.com</p>
+                <p style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted-foreground)", margin: "0 0 2rem 0" }}>Avg. client retention past year one</p>
                 <div style={{ height: "1px", background: "var(--border)", marginBottom: "2rem" }} />
                 <p style={{ fontSize: "0.875rem", lineHeight: 1.7, color: "var(--muted-foreground)", margin: 0 }}>
-                    "Verified Guru team with proven results — clear communication, reliable delivery, creative + technical expertise, and a long-term partnership mindset."
+                    "We don't chase rankings. We chase revenue. Our team runs SEO, AEO, GEO, SMM, and media platform management as a single coordinated growth engine."
                 </p>
             </div>
         </section>
@@ -256,14 +256,14 @@ function ServicesSection() {
                 <div>
                     <p className="svc-head" style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--primary)", margin: "0 0 1.25rem 0", opacity: 0 }}>What We Do</p>
                     <div className="svc-head" style={{ opacity: 0 }}>
-                        <CurtainHeading text="End-to-End Digital Services" as="h2"
+                        <CurtainHeading text="One Stack, Every Surface" as="h2"
                             style={{ fontSize: "clamp(1.6rem, 3vw, 2.6rem)", fontWeight: 900, letterSpacing: "-0.03em", color: "var(--foreground)" }}
                             delay={0}
                         />
                     </div>
                 </div>
                 <p className="svc-head" style={{ fontSize: "0.875rem", lineHeight: 1.7, color: "var(--muted-foreground)", maxWidth: "38ch", margin: 0, opacity: 0 }}>
-                    From concept to deployment — we handle the full stack so you don't stitch together multiple vendors.
+                    Search, social, and earned media — strategized, produced and optimized by a single coordinated team.
                 </p>
             </div>
 
@@ -315,7 +315,7 @@ function WhyUsSection() {
 
     return (
         <section ref={sectionRef} style={{ padding: `${sectionPy} ${px}` }}>
-            <p className="why-head" style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--primary)", margin: "0 0 1.25rem 0", opacity: 0 }}>Why Pioneers Tech</p>
+            <p className="why-head" style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--primary)", margin: "0 0 1.25rem 0", opacity: 0 }}>Why Z Growth Media</p>
             <div className="why-head" style={{ opacity: 0 }}>
                 <CurtainHeading text="What Sets Us Apart" as="h2"
                     style={{ fontSize: "clamp(1.6rem, 3vw, 2.6rem)", fontWeight: 900, letterSpacing: "-0.03em", color: "var(--foreground)", marginBottom: "3rem" }}
@@ -434,8 +434,8 @@ export default function AboutPage() {
 
             <PageHero
                 label="Who We Are"
-                title={"Built to Build\nThings That Last"}
-                subtitle="Pioneers Tech is a verified, top-rated freelance team helping startups, agencies, and enterprises turn ideas into high-performing digital solutions."
+                title={"The Growth Agency\nFor The AI-Era."}
+                subtitle="Z Growth Media is a UK + Pakistan digital marketing agency scaling brands through traditional SEO, AI-era search optimization (AEO/GEO), full-service social, and media platform management."
                 tag="01"
                 breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
                 useCurtainTitle
