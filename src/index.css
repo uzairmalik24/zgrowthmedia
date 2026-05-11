@@ -1,0 +1,212 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Syne', sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ── Light theme (default) ─────────────────────────────────────── */
+:root {
+  /* Primary – modern SaaS blue */
+  --primary: oklch(60% 0.18 250);
+  --primary-foreground: oklch(99% 0.01 80);
+
+  /* Soft blue surface */
+  --secondary: oklch(96% 0.02 250);
+  --secondary-foreground: oklch(45% 0.12 250);
+
+  /* Slightly deeper accent blue */
+  --tertiary: oklch(70% 0.15 240);
+  --tertiary-foreground: oklch(99% 0.01 80);
+
+  /* Base surfaces */
+  --background: oklch(97% 0.008 250);
+  --foreground: oklch(20% 0.04 250);
+
+  --muted: oklch(97% 0.01 250);
+  --muted-foreground: oklch(50% 0.05 250);
+
+  --border: oklch(90% 0.02 250);
+  --input: oklch(90% 0.02 250);
+  --ring: var(--primary);
+
+  --card: oklch(100% 0 0);
+  --card-foreground: var(--foreground);
+
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+
+  --accent: oklch(95% 0.025 250);
+  --accent-foreground: var(--foreground);
+
+  --destructive: oklch(60% 0.24 27);
+  --destructive-foreground: oklch(99% 0 0);
+
+  --radius: 0.75rem;
+
+  /* Charts – clean blue variations */
+  --chart-1: oklch(62% 0.19 250);
+  --chart-2: oklch(70% 0.15 240);
+  --chart-3: oklch(55% 0.17 255);
+  --chart-4: oklch(75% 0.13 245);
+  --chart-5: oklch(65% 0.16 235);
+}
+
+/* Dark mode */
+.dark {
+  --primary: oklch(70% 0.20 250);
+  --primary-foreground: oklch(14% 0.03 250);
+
+  --secondary: oklch(20% 0.04 250);
+  --secondary-foreground: oklch(75% 0.12 250);
+
+  --tertiary: oklch(72% 0.15 240);
+  --tertiary-foreground: oklch(14% 0.03 250);
+
+  --background: oklch(12% 0.03 250);
+  --foreground: oklch(96% 0.01 250);
+
+  --muted: oklch(18% 0.03 250);
+  --muted-foreground: oklch(70% 0.05 250);
+
+  --border: oklch(28% 0.04 250);
+  --input: oklch(28% 0.04 250);
+  --ring: var(--primary);
+
+  --card: oklch(15% 0.03 250);
+  --card-foreground: var(--foreground);
+
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+
+  --accent: oklch(22% 0.04 250);
+  --accent-foreground: var(--foreground);
+
+  --destructive: oklch(70% 0.22 25);
+  --destructive-foreground: oklch(98% 0 0);
+
+  --chart-1: oklch(75% 0.20 250);
+  --chart-2: oklch(80% 0.16 240);
+  --chart-3: oklch(70% 0.17 255);
+  --chart-4: oklch(85% 0.14 245);
+  --chart-5: oklch(78% 0.18 235);
+}
+
+/* ── Make variables available as Tailwind colors ── */
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-foreground: var(--tertiary-foreground);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+/* ── Base styles ─────────────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+
+    /* 
+      Light mode background treatment:
+      Three-layer approach —
+        1. A very faint radial glow near top-right (primary tinted, barely visible)
+        2. A second softer glow bottom-left for balance
+        3. The base --background colour underneath both
+      Net result: still reads as "clean white/off-white" to the client but 
+      has life and depth rather than flat #ffffff.
+    */
+    background-color: var(--background);
+    background-image:
+      radial-gradient(ellipse 80% 50% at 75% -10%,
+        color-mix(in oklch, var(--primary) 7%, transparent),
+        transparent 70%),
+      radial-gradient(ellipse 60% 40% at 10% 100%,
+        color-mix(in oklch, var(--primary) 5%, transparent),
+        transparent 65%);
+    background-attachment: fixed;
+  }
+
+  /* Dark mode: override with its own flat bg — the gradients would look off */
+  .dark body {
+    background-image: none;
+    background-color: var(--background);
+  }
+
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in oklch, var(--primary) 70%, transparent) color-mix(in oklch, var(--muted) 40%, transparent);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: color-mix(in oklch, var(--muted) 40%, transparent);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: color-mix(in oklch, var(--primary) 70%, transparent);
+    border-radius: 9999px;
+    border: 2px solid color-mix(in oklch, var(--muted) 40%, transparent);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary);
+  }
+}
+
+button {
+  cursor: pointer;
+}
